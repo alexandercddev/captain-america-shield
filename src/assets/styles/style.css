@@ -1,0 +1,159 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  position: fixed;
+}
+
+.container-logo {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.container-logo > #click-me {
+  margin-bottom: 20px;
+}
+.container-logo > button {
+  background: transparent;
+  border: none;
+  border-radius: 100%;
+}
+.container-logo > button#shield {
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+}
+.container-logo > button#shield > div.circle-red {
+  width: 100%;
+  height: 100%;
+  background: #db1a23;
+  background: linear-gradient(45deg, #db1a23 0%, #880202 50%, #e90c1f 100%);
+  border-radius: 100%;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+.container-logo > button#shield > div.circle-red::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background: #FFF;
+  border-radius: 100%;
+}
+.container-logo > button#shield > div.circle-red::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: #db1a23;
+  background: linear-gradient(45deg, #db1a23 0%, #880202 50%, #e90c1f 100%);
+  border-radius: 100%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.container-logo > button#shield > div.circle-red > div.circle-blue {
+  width: 100px;
+  height: 100px;
+  background: #db1a23;
+  background: linear-gradient(45deg, #4c38ad 0%, #3011bb 50%, #5540b3 100%);
+  border-radius: 100%;
+  z-index: 100;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.container-logo > button#shield > div.circle-red > div.circle-blue > div.star, .container-logo > button#shield > div.circle-red > div.circle-blue > div.star::before, .container-logo > button#shield > div.circle-red > div.circle-blue > div.star::after {
+  width: 0;
+  border: 1px solid;
+  border-color: transparent transparent #FFF transparent;
+  border-width: 0px 45px 33px 45px;
+  position: absolute;
+  transform: rotate(180deg);
+}
+.container-logo > button#shield > div.circle-red > div.circle-blue > div.star::before {
+  content: "";
+  margin-top: 32px;
+  transform: rotate(70deg);
+}
+.container-logo > button#shield > div.circle-red > div.circle-blue > div.star::after {
+  content: "";
+  margin-top: 32px;
+  transform: rotate(-70deg);
+}
+
+.animation-spin {
+  animation: spin 2s linear infinite;
+}
+
+.animation-click-1 {
+  animation: click-1 1.5s linear infinite;
+}
+
+.animation-click-2 {
+  animation: click-2 2s linear infinite;
+}
+
+.animation-click-3 {
+  animation: click-3 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes click {
+  0% {
+    transform: rotateY(-90deg);
+  }
+  100% {
+    transform: rotatey(90deg);
+  }
+}
+@keyframes click-1 {
+  0% {
+    transform: translate(100%, -100%);
+  }
+  20% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-100%, -100%);
+  }
+  60% {
+    transform: translate(0px, 0px);
+  }
+  80% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes click-2 {
+  0% {
+    transform: rotateY(-180deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+@keyframes click-3 {
+  0% {
+    transform: rotateX(-180deg);
+  }
+  100% {
+    transform: rotateX(180deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
