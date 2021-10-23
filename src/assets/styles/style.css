@@ -155,5 +155,19 @@ div {
     transform: rotateX(180deg);
   }
 }
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  .container-logo {
+    width: auto;
+    height: auto;
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
